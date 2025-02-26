@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LKG - Mr. Master</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <style>body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #e6f7ff; /* Light blue */
+    }
+    
+    header {
+        background-color: #0073e6;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    h1 {
+        margin: 0;
+    }
+    
+    .back-button {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #005bb5;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+    
+    .back-button:hover {
+        background-color: #004494;
+    }
+    
+    .category-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 squares per row */
+        gap: 20px;
+        justify-items: center;
+        margin-top: 30px;
+    }
+    
+    .category-box {
+        width: 150px;
+        height: 150px;
+        background-color: white;
+        color: #0073e6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        border: 3px solid #0073e6;
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+    
+    .category-box:hover {
+        background-color: #0073e6;
+        color: white;
+    }
+    </style>
+    <header>
+        <h1>LKG</h1>
+        <a href="services.html" class="back-button">Back to Services</a>
+    </header>
+
+    <main>
+        <div class="category-container">
+            <a href="englishl.html" class="category-box">English</a>
+            <a href="tamill.html" class="category-box">Tamil</a>
+            <a href="mathsl.html" class="category-box">Maths</a>
+            <a href="sciencel.html" class="category-box">Science</a>
+            <a href="poemsl.html" class="category-box">Poems</a>
+            <a href="storiesl.html" class="category-box">Stories</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mr. Master</p>
+    </footer>
+</body>
+</html>
