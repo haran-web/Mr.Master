@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Options</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .download-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .message {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        button {
+            padding: 15px 25px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Download Paper</h1>
+    <nav>
+        <button onclick="window.history.back()">Back</button>
+    </nav>
+</header>
+
+<main>
+    <div class="download-container">
+        <h2>Download Paper</h2>
+
+        <div class="message" id="message">
+            <!-- This will be dynamically updated based on the user status -->
+        </div>
+
+        <button id="downloadButton" onclick="downloadPaper()">Download Paper</button>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2025 Mr. Master</p>
+</footer>
+
+<script>
+    // Simulating retrieving user data from localStorage (you'd use server-side for production)
+    const userData = JSON.parse(localStorage.getItem('userData'));
+
+    // Function to check user status
+    function checkMembershipStatus() {
+        if (userData) {
+            const currentDate = new Date();
+            const registrationDate = new Date(userData.registrationDate);
+            const daysSinceJoin = Math.floor((currentDate - registrationDate) / (1000 * 3600 * 24));
+
+            // Check if within the 14 days free download period
+            if (daysSinceJoin < 14) {
+                document.getElementById("message").innerText = "You have 14 days of free downloads.";
+                document.getElementById("downloadButton").innerText = "Download for Free";
+                userData.membershipStatus = "free";
+            } else if (userData.membershipStatus === "free") {
+                // After 14 days, prompt for payment
+                document.getElementById("message").innerText = "You need to pay $10/month for continued access.";
+                document.getElementById("downloadButton").innerText = "Subscribe for $10";
+                userData.membershipStatus = "paid";
+            } else {
+                // User has paid
+                document.getElementById("message").innerText = "You are a paid member.";
+                document.getElementById("downloadButton").innerText = "Download Now";
+            }
+        } else {
+            // If no user data exists, redirect to registration page
+            window.location.href = 'registration.html'; // Redirect if not registered
+        }
+    }
+
+    // Simulate paper download process
+    function downloadPaper() {
+        if (userData.membershipStatus === "paid") {
+            // Redirect to the actual paper download link
+            window.location.href = "uploads/00001.pdf"; // Replace with the actual file path
+        } else {
+            alert("You need to be a paid member to download the paper.");
+        }
+    }
+
+    // Check membership status
+    checkMembershipStatus();
+</script>
+
+</body>
+</html>

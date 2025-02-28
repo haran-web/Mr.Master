@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Paper</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .paper-details { margin-top: 20px; padding: 20px; border: 1px solid #ccc; display: block; }
+        .back-button { 
+            position: absolute; 
+            top: 10px; 
+            left: 10px; 
+            background-color: #4CAF50; 
+            color: white; 
+            padding: 10px 20px; 
+            border: none; 
+            cursor: pointer; 
+        }
+        .back-button:hover {
+            background-color: #45a049;
+        }
+        .download-button {
+            background-color: #008CBA;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .download-button:hover {
+            background-color: #005f73;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Back button to navigate to the previous page -->
+    <button class="back-button" onclick="window.history.back()">Back</button>
+
+    <h1>View Paper</h1>
+
+    <!-- Paper details will be dynamically displayed here -->
+    <div class="paper-details" id="paper-details">
+        <!-- Paper content will be inserted by JavaScript -->
+    </div>
+
+    <br>
+
+    <!-- Download button -->
+    <button class="download-button" id="download-button" onclick="downloadPaper()">Download Paper</button>
+
+    <script>
+        // Get the paper name from the URL query string (e.g., view.html?paper=English Paper 1)
+        const urlParams = new URLSearchParams(window.location.search);
+        const paperName = urlParams.get('paper');
+
+        // Display paper details dynamically (in this case, a title and a description)
+        const paperDetailsDiv = document.getElementById('paper-details');
+        paperDetailsDiv.innerHTML = `
+            <h2>${paperName}</h2>
+            <p>Here you can find the details of the selected paper. This section can contain any other information you wish to include about the paper.</p>
+        `;
+
+        // Function to handle paper download
+        function downloadPaper() {
+            // Assuming you have a folder called "papers" where the PDF files are stored
+            const downloadLink = `papers/${paperName}.pdf`; // Customize the path to where your paper files are located
+            
+            // Trigger the download by setting the window location to the file path
+            window.location.href = downloadLink;
+        }
+    </script>
+
+</body>
+</html>

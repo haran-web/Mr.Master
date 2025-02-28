@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Admin Panel</h1>
+</header>
+
+<main>
+    <h2>Upload a Paper</h2>
+    <form action="upload_paper.php" method="POST" enctype="multipart/form-data">
+        <label for="category">Category:</label>
+        <select name="category">
+            <option value="English">English</option>
+            <option value="Tamil">Tamil</option>
+            <option value="Maths">Maths</option>
+            <!-- Add other subjects here -->
+        </select>
+
+        <label for="paper-file">Upload Paper:</label>
+        <input type="file" name="paper-file" accept=".pdf, .doc, .docx" required>
+
+        <button type="submit">Upload Paper</button>
+    </form>
+</main>
+
+<footer>
+    <p>&copy; 2025 Mr. Master</p>
+</footer>
+
+</body>
+</html>

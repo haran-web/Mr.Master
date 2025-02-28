@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Paper</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .pdf-container {
+            display: none;
+            width: 100%;
+            height: 500px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Social Paper</h1>
+    <nav>
+        <button onclick="window.history.back()">Back</button>
+    </nav>
+</header>
+
+<main>
+    <h2>Paper Details</h2>
+    <div class="paper-details">
+        <p>Hover or click the button below to preview the paper.</p>
+    </div>
+
+    <button onclick="previewPaper()" onmouseover="previewPaper()">Preview Paper</button>
+    <iframe id="pdfViewer" class="pdf-container"></iframe>
+
+    <button onclick="redirectToRegister()">Download Paper</button>
+</main>
+
+<footer>
+    <p>&copy; 2025 Mr. Master</p>
+</footer>
+
+<script>
+    function previewPaper() {
+        var pdfViewer = document.getElementById("pdfViewer");
+        pdfViewer.src = "uploads/0147.pdf"; // Replace with the actual file path
+        pdfViewer.style.display = "block";
+    }
+
+    function redirectToRegister() {
+        window.location.href = "registration.html"; // Replace with the actual registration page URL
+    }
+</script>
+
+</body>
+</html>

@@ -12,6 +12,7 @@ header {
     text-align: center;
 }
 
+
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -74,8 +75,9 @@ section img {
 
 footer {
     text-align: center;
+    bottom: 0%;
     
-    padding: 20px;
+    padding: 5%;
     background-color: #03011f;
     color: white;
     margin-bottom: 0%;
@@ -185,4 +187,3 @@ header {
     }
 
 }
-
