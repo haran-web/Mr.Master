@@ -28,17 +28,33 @@
             display: block;
             margin: 0 auto;
         }
+
         h1 {
-            font-size: 80px;  /* Bigger font size */
-            font-weight: bold; /* Bold text */
-            text-align: center; /* Centered */
-        padding: 0%;}
-        h2 {font-size: 40px;
-        font-weight: bold;
-    text-align: center;
-color: darkgoldenrod;}
-h3 {font-size: 40px;
-color: rgb(222, 243, 37);}
+            font-size: 80px;  
+            font-weight: bold; 
+            text-align: center;
+            padding: 0;
+        }
+
+        h2 {
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+            color: darkgoldenrod;
+        }
+
+        h3 {
+            font-size: 40px;
+            color: rgb(222, 243, 37);
+        }
+
+        /* Image styling */
+        #randomImage {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
     </style>
 </head>
 <body>
@@ -59,8 +75,11 @@ color: rgb(222, 243, 37);}
     <main>
         <section>
             <h2>Welcome to Mr. Master!</h2>
-            <img src="images/004.JPG" alt="Welcome to Mr. Master" style="width: 100%; height: auto;">
-        <br>    
+            
+            <!-- Random Image Display -->
+            <img id="randomImage" src="" alt="Welcome to Mr. Master">
+
+            <br>    
             <!-- Video Clip with Auto-Play on Scroll & Hover -->
             <video id="advVideo" muted playsinline>
                 <source src="uploads/add-clip.mp4" type="video/mp4">
@@ -80,6 +99,16 @@ color: rgb(222, 243, 37);}
     </footer>
 
     <script>
+        // Array of images
+        const images = ["images/e02 copy.jpg", "images/004.jpg"];
+
+        // Select a random image
+        const randomImage = images[Math.floor(Math.random() * images.length)];
+
+        // Apply random image to the src attribute
+        document.getElementById("randomImage").src = randomImage;
+
+        // Video Auto-Play on Scroll & Hover
         document.addEventListener("DOMContentLoaded", function() {
             const video = document.getElementById("advVideo");
 
