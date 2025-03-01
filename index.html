@@ -6,6 +6,13 @@
     <title>Mr. Master</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        /* General Page Styles */
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
         /* Navigation adjustment for mobile */
         @media (max-width: 768px) {
             nav ul {
@@ -55,31 +62,62 @@
             display: block;
             margin: 0 auto;
         }
+
+        /* Ensure image is visible on mobile */
+        @media (max-width: 768px) {
+            #randomImage {
+                width: 100%;
+                height: auto;
+                display: block;
+                margin-top: 10px; /* Small space below h2 */
+            }
+        }
+
+        /* Background color for Home, About, Services sections */
+        .section-black {
+            background-color: rgb(18, 5, 92);
+            color: white;
+            padding: 50px 0;
+        }
+
+        /* Navigation links */
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        nav ul li a:hover {
+            background-color: gray;
+        }
     </style>
 </head>
 <body>
 
+    <!-- Heading (H1) at the top -->
     <header>
         <h1>Mr. Master</h1>
-        <nav>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="privacy.html">Privacy Policy</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <main>
-        <section>
-            <h2>Welcome to Mr. Master!</h2>
-            
-            <!-- Random Image Display -->
-            <img id="randomImage" src="" alt="Welcome to Mr. Master">
+    <!-- Navigation Below H1 -->
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+    </nav>
 
-            <br>    
+    <main>
+        <!-- Home Section with Black Background -->
+        <section class="section-black">
+            <h2>Welcome to Mr. Master!</h2>
+<br>
+            <!-- Random Image (Now properly positioned) -->
+            <img id="randomImage" src="" alt="Welcome to Mr. Master">
+<br>
             <!-- Video Clip with Auto-Play on Scroll & Hover -->
             <video id="advVideo" muted playsinline>
                 <source src="uploads/add-clip.mp4" type="video/mp4">
@@ -100,7 +138,7 @@
 
     <script>
         // Array of images
-        const images = ["images/e02 copy.jpg", "images/004.jpg"];
+        const images = ["images/004.jpg", "images/e02 copy.jpg"];
 
         // Select a random image
         const randomImage = images[Math.floor(Math.random() * images.length)];
