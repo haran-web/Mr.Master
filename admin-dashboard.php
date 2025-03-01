@@ -7,3 +7,4 @@ if (!isset($_SESSION['admin_id'])) {
 ?>
 <h1>Welcome, Admin</h1>
 <a href="upload-file.php">Upload Tute/Papers</a>
+

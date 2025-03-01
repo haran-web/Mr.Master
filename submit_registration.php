@@ -13,6 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
     $otp = $_POST['otp'];  // This OTP will be compared to the sent one
 
+    
     // Normally, you would validate the OTP here with a database or an API (e.g. Twilio for SMS)
 
     // Assuming OTP is correct

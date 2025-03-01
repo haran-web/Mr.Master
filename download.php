@@ -14,6 +14,7 @@ if (isset($_GET['id'])) {
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
+    
 
     // Fetch paper details
     $sql = "SELECT * FROM pass_papers WHERE id = '$paper_id'";
