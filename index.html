@@ -5,12 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mr. Master</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Navigation adjustment for mobile */
+        @media (max-width: 768px) {
+            nav ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0;
+            }
+            nav ul li {
+                width: 100%;
+                text-align: center;
+                padding: 5px 0;
+            }
+        }
+
+        /* Ensuring smooth video playback */
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 80px;  /* Bigger font size */
+            font-weight: bold; /* Bold text */
+            text-align: center; /* Centered */
+        padding: 0%;}
+        h2 {font-size: 40px;
+        font-weight: bold;
+    text-align: center;
+color: darkgoldenrod;}
+h3 {font-size: 40px;
+color: rgb(222, 243, 37);}
+    </style>
 </head>
 <body>
 
     <header>
         <h1>Mr. Master</h1>
-    
         <nav>
             <ul>
                 <li><a href="home.html">Home</a></li>
@@ -18,29 +52,55 @@
                 <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
                 <li><a href="privacy.html">Privacy Policy</a></li>
-                
             </ul>
         </nav>
     </header>
 
     <main>
         <section>
-            <h4>Welcome to Mr.Master!</h4>
-            <img src="images/004.JPG" alt="Welcome to Mr.Master">
+            <h2>Welcome to Mr. Master!</h2>
+            <img src="images/004.JPG" alt="Welcome to Mr. Master" style="width: 100%; height: auto;">
+        <br>    
+            <!-- Video Clip with Auto-Play on Scroll & Hover -->
+            <video id="advVideo" muted playsinline>
+                <source src="uploads/add-clip.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
             <p style="font-size: 30px;">Your Learning Journey Begins Here!</p>
-            <p>At Mr.Master, we believe that learning is an adventure, and everyone deserves the tools to succeed. Whether you're a parent helping your child grow or an adult looking to expand your knowledge, we're here to guide you every step of the way. Our carefully curated resources, interactive online classes, and downloadable educational materials are designed to spark curiosity and enhance your learning experience. From LKG to Grade 5, explore a world of knowledge at your fingertips, where education meets creativity.</p>
+            <p>At Mr. Master, we believe that learning is an adventure, and everyone deserves the tools to succeed. Whether you're a parent helping your child grow or an adult looking to expand your knowledge, we're here to guide you every step of the way. Our carefully curated resources, interactive online classes, and downloadable educational materials are designed to spark curiosity and enhance your learning experience. From LKG to Grade 5, explore a world of knowledge at your fingertips, where education meets creativity.</p>
 
             <h2>Join us in this exciting journey of learning, growth, and success.</h2>
-            <br>
             <h3>Welcome to the future of education.</h3>
         </section>
     </main>
-    
-    
 
     <footer>
         <p>&copy; 2025 Mr. Master</p>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const video = document.getElementById("advVideo");
+
+            // Using Intersection Observer for better viewport detection
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        video.play(); // Auto play when in view
+                    } else {
+                        video.pause(); // Pause when out of view
+                    }
+                });
+            }, { threshold: 0.5 }); // Trigger when at least 50% of the video is visible
+
+            observer.observe(video);
+
+            // Play video on hover, pause on leave
+            video.addEventListener("mouseenter", () => video.play());
+            video.addEventListener("mouseleave", () => video.pause());
+        });
+    </script>
 
 </body>
 </html>
