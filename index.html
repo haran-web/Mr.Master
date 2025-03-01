@@ -48,6 +48,7 @@
             font-weight: bold;
             text-align: center;
             color: darkgoldenrod;
+            padding: 0%;
         }
 
         h3 {
@@ -90,6 +91,27 @@
         nav ul li a:hover {
             background-color: gray;
         }
+        <style>
+    /* Ensuring smooth image rendering */
+    #randomImage {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Ensuring image is visible on mobile */
+    @media (max-width: 768px) {
+        #randomImage {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-top: 10px; /* Small space below h2 */
+            visibility: visible; /* Ensure image is visible */
+        }
+    }
+</style>
+
     </style>
 </head>
 <body>
