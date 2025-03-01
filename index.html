@@ -6,14 +6,14 @@
     <title>Mr. Master</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* General Page Styles */
+      
         body {
             background-color: black;
             color: white;
             font-family: Arial, sans-serif;
         }
 
-        /* Navigation adjustment for mobile */
+       
         @media (max-width: 768px) {
             nav ul {
                 display: flex;
@@ -28,7 +28,7 @@
             }
         }
 
-        /* Ensuring smooth video playback */
+      
         video {
             width: 100%;
             height: auto;
@@ -56,14 +56,14 @@
             color: rgb(222, 243, 37);
         }
 
-        /* Background color for Home, About, Services sections */
+      
         .section-black {
             background-color: rgb(18, 5, 92);
             color: white;
             padding: 50px 0;
         }
 
-        /* Navigation links */
+      
         nav ul li a {
             color: white;
             text-decoration: none;
@@ -74,7 +74,7 @@
             background-color: gray;
         }
 
-        /* Ensuring smooth image rendering */
+      
         #topImage, #randomImage {
             width: 100%;
             height: auto;
@@ -82,26 +82,25 @@
             margin: 0 auto;
         }
 
-        /* Ensuring image is visible on mobile */
+      
         @media (max-width: 768px) {
             #topImage, #randomImage {
                 width: 100%;
                 height: auto;
                 display: block;
-                margin-top: 10px; /* Small space below h2 */
-                visibility: visible; /* Ensure image is visible */
+                margin-top: 10px; 
+                visibility: visible; 
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Heading (H1) at the top -->
     <header>
         <h1>Mr. Master</h1>
     </header>
 
-    <!-- Navigation Below H1 -->
+   
     <nav>
         <ul>
             <li><a href="home.html">Home</a></li>
@@ -113,22 +112,22 @@
     </nav>
 
     <main>
-        <!-- Home Section with Black Background -->
+      
         <section class="section-black">
             <h2>Welcome to Mr. Master!</h2>
             
-            <!-- First Image (e03.jpg) above the video -->
-            <img id="topImage" src="images/e03.jpg" alt="Welcome to Mr. Master">
+           
+            <img id="topImage" src="images/a001.JPG" alt="Welcome to Mr. Master">
             
             <br>     
-            <!-- Video Clip -->
+           
             <video id="advVideo" muted playsinline>
                 <source src="uploads/add-clip.mp4" type="video/mp4">
-                Your browser does not support the video tag.
+                
             </video>
             <br>
-            <!-- Second Image (004.jpg) below the video -->
-            <img id="randomImage" src="images/004.jpg" alt="Welcome to Mr. Master">
+          
+            <img id="randomImage" src="images/a002.JPG" alt="Welcome to Mr. Master">
             
             <p style="font-size: 30px;">Your Learning Journey Begins Here!</p>
             <p>At Mr. Master, we believe that learning is an adventure, and everyone deserves the tools to succeed. Whether you're a parent helping your child grow or an adult looking to expand your knowledge, we're here to guide you every step of the way. Our carefully curated resources, interactive online classes, and downloadable educational materials are designed to spark curiosity and enhance your learning experience. From LKG to Grade 5, explore a world of knowledge at your fingertips, where education meets creativity.</p>
@@ -143,24 +142,23 @@
     </footer>
 
     <script>
-        // Video Auto-Play on Scroll & Hover
+       
         document.addEventListener("DOMContentLoaded", function() {
             const video = document.getElementById("advVideo");
 
-            // Using Intersection Observer for better viewport detection
+           
             const observer = new IntersectionObserver(entries => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        video.play(); // Auto play when in view
+                        video.play(); 
                     } else {
-                        video.pause(); // Pause when out of view
+                        video.pause(); 
                     }
                 });
-            }, { threshold: 0.5 }); // Trigger when at least 50% of the video is visible
+            }, { threshold: 0.5 }); 
 
             observer.observe(video);
 
-            // Play video on hover, pause on leave
             video.addEventListener("mouseenter", () => video.play());
             video.addEventListener("mouseleave", () => video.pause());
         });
