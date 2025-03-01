@@ -56,8 +56,6 @@
             color: rgb(222, 243, 37);
         }
 
-     
-
         /* Background color for Home, About, Services sections */
         .section-black {
             background-color: rgb(18, 5, 92);
@@ -75,28 +73,25 @@
         nav ul li a:hover {
             background-color: gray;
         }
-        
-    /* Ensuring smooth image rendering */
-    #randomImage {
-        width: 100%;
-        height: auto;
-        display: block;
-        margin: 0 auto;
-        visibility: visible; /* Ensure visibility */
-    }
 
-    /* Ensuring image is visible on mobile */
-    @media (max-width: 768px) {
-        #randomImage {
+        /* Ensuring smooth image rendering */
+        #randomImage, #topImage {
             width: 100%;
             height: auto;
             display: block;
-            margin-top: 10px; /* Small space below h2 */
-            visibility: visible; /* Ensure image is visible */
+            margin: 0 auto;
         }
-    }
-</style>
 
+        /* Ensuring image is visible on mobile */
+        @media (max-width: 768px) {
+            #randomImage, #topImage {
+                width: 100%;
+                height: auto;
+                display: block;
+                margin-top: 10px; /* Small space below h2 */
+                visibility: visible; /* Ensure image is visible */
+            }
+        }
     </style>
 </head>
 <body>
@@ -121,15 +116,21 @@
         <!-- Home Section with Black Background -->
         <section class="section-black">
             <h2>Welcome to Mr. Master!</h2>
-<br>
-            <!-- Random Image (Now properly positioned) -->
-            <img id="randomImage" src="" alt="Welcome to Mr. Master">
-<br>
+            
+            <!-- Top Image (e03.jpg) above the h3 heading -->
+            <img id="topImage" src="images/e03.jpg" alt="Welcome to Mr. Master">
+            
+       <br>     
             <!-- Video Clip with Auto-Play on Scroll & Hover -->
             <video id="advVideo" muted playsinline>
                 <source src="uploads/add-clip.mp4" type="video/mp4">
-                Your browser does not support the video tag.
+                
+
             </video>
+<br>
+            <!-- Random Image (004.jpg) below the heading -->
+            <img id="randomImage" src="images/004.jpg" alt="Welcome to Mr. Master">
+            
 
             <p style="font-size: 30px;">Your Learning Journey Begins Here!</p>
             <p>At Mr. Master, we believe that learning is an adventure, and everyone deserves the tools to succeed. Whether you're a parent helping your child grow or an adult looking to expand your knowledge, we're here to guide you every step of the way. Our carefully curated resources, interactive online classes, and downloadable educational materials are designed to spark curiosity and enhance your learning experience. From LKG to Grade 5, explore a world of knowledge at your fingertips, where education meets creativity.</p>
@@ -144,15 +145,6 @@
     </footer>
 
     <script>
-        // Array of images
-        const images = ["images/001.jpg", "images/e03.jpg"];
-
-        // Select a random image
-        const randomImage = images[Math.floor(Math.random() * images.length)];
-
-        // Apply random image to the src attribute
-        document.getElementById("randomImage").src = randomImage;
-
         // Video Auto-Play on Scroll & Hover
         document.addEventListener("DOMContentLoaded", function() {
             const video = document.getElementById("advVideo");
