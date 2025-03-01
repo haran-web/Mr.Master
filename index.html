@@ -75,7 +75,7 @@
         }
 
         /* Ensuring smooth image rendering */
-        #randomImage, #topImage {
+        #topImage, #randomImage {
             width: 100%;
             height: auto;
             display: block;
@@ -84,7 +84,7 @@
 
         /* Ensuring image is visible on mobile */
         @media (max-width: 768px) {
-            #randomImage, #topImage {
+            #topImage, #randomImage {
                 width: 100%;
                 height: auto;
                 display: block;
@@ -117,21 +117,19 @@
         <section class="section-black">
             <h2>Welcome to Mr. Master!</h2>
             
-            <!-- Top Image (e03.jpg) above the h3 heading -->
+            <!-- First Image (e03.jpg) above the video -->
             <img id="topImage" src="images/e03.jpg" alt="Welcome to Mr. Master">
             
-       <br>     
-            <!-- Video Clip with Auto-Play on Scroll & Hover -->
+            <br>     
+            <!-- Video Clip -->
             <video id="advVideo" muted playsinline>
                 <source src="uploads/add-clip.mp4" type="video/mp4">
-                
-
+                Your browser does not support the video tag.
             </video>
-<br>
-            <!-- Random Image (004.jpg) below the heading -->
+            <br>
+            <!-- Second Image (004.jpg) below the video -->
             <img id="randomImage" src="images/004.jpg" alt="Welcome to Mr. Master">
             
-
             <p style="font-size: 30px;">Your Learning Journey Begins Here!</p>
             <p>At Mr. Master, we believe that learning is an adventure, and everyone deserves the tools to succeed. Whether you're a parent helping your child grow or an adult looking to expand your knowledge, we're here to guide you every step of the way. Our carefully curated resources, interactive online classes, and downloadable educational materials are designed to spark curiosity and enhance your learning experience. From LKG to Grade 5, explore a world of knowledge at your fingertips, where education meets creativity.</p>
 
