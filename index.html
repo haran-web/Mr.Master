@@ -6,154 +6,210 @@
     <title>Mr. Master</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-            background-color: rgb(143, 161, 241);
-            color: rgb(31, 1, 1);
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-
-        header {
-            width: 95%;
-            height: 100px; /* Full screen height */
-            margin: 0; /* Remove margin */
-            padding: 25px; /* Remove padding */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden; /* Hide any overflow */
-        }
-
-        header img {
-           width: 95%;
-            height: 200px;
-            object-fit: cover; /* Ensures image fills the entire header */
-        }
+      
+      body {
+    background-color: rgb(143, 161, 241);
+   
+    font-family: Arial, sans-serif;
+    margin: 0%;
+    padding: 0%;
+    text-align: center;
+}
 
 
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: stretch;
-            padding: 10px;
-        }
 
-        .video-section {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
 
-        .sidebar {
-            background-color: rgb(91, 101, 243);
-            padding: 10px;
-            width: 25%;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-        }
+.nav-container {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    width: 98%;
+}
 
-        .sidebar ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+.nav-container ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
 
-        .sidebar ul li {
-            padding: 15px 0;
-        }
+.nav-container ul li {
+    display: inline;
+}
 
-        .sidebar ul li a {
-            color: white;
-            text-underline-offset: 5px;
-            text-shadow: 3px;
-            text-decoration: none;
-            font-size: 16px; /* Smaller font size for the sidebar tabs */
-        }
+.nav-container ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+}
 
-        video {
-            width: 100%;
-            height: 100%; /* Ensure the video fills the section */
-            object-fit: cover; /* This helps the video cover the area */
-            display: block;
-            margin: 0 auto;
-        }
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin: 10px;
+    height: 80vh; /* Adjusted to make the content container have 80% height of the viewport */
+}
 
-        h4 {
-            font-size: 40px;
-            text-align: center;
-            font-weight: bolder;
-            color: yellow;
-        }
+.video-section1  {
+    width: 58%;
+    padding: 0px;
+    height: 102%; /* Ensures video section occupies the full height of its container */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+}
+.video-section2  {
+    width: 68%;
+    padding: 0px;
+    height: 100%; /* Ensures video section occupies the full height of its container */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+}
+video {
+    width: 150%;
+    height: 100%; /* Ensures the video takes full height */
+    object-fit: fill;
+    display: flex;
+}
 
-        h3 {
-            font-size: 30px;
-            color: chocolate;
-            text-align: center;
-        }
-        h6 {font-size: 30px;
-        font-weight: bolder;
-    text-shadow: 10px;}
 
-        footer {
-            background-color: rgb(10, 3, 70);
-            padding: 20px;
-            margin-top: 20px;
-            color: azure;
-        }
+.sidebar {
+    background: none;
+    padding: 10px;
+    width: 25%;
+    height: 98%; /* Ensures sidebar occupies the full height of its container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+   
+}
 
-        .sidebar img {
-            margin-top: 20px;
-            width: 100%;
-            height: 100%;
-        }
+.auth-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 15px;
+}
 
-        .home-section h2, .about-section h2, .services-section h2 {
-            font-size: 24px;
-            color: white;
-            text-align: center;
-            margin: 0;
-        }
+.auth-buttons a {
+    text-decoration: none;
+    color: white;
+background-color: blue;
+    padding: 20px;
+  
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 25px 0;
+    text-align: center;
+}
 
-        .welcome-box {
-            padding: 1px;
-            font-size: 40px;
-            background-color: #7fa0e7;
-            color: rgb(65, 65, 2);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow effect */
-            margin-top: 0;
-        }
+.sidebar img {
+    margin-bottom: 20px;
+    width: 100%;
+    height: auto;
+    padding: 50px;
+ 
+}
+
+
+
+
+h4 {
+    font-size: 40px;
+    text-align: center;
+    font-weight: bolder;
+    color: yellow;
+}
+
+h3 {
+    font-size: 30px;
+    color: chocolate;
+    text-align: center;
+}
+
+h6 {
+    font-size: 60px;
+    color: aliceblue;
+    text-transform: capitalize;
+    text-shadow: rgba(0, 0, 0, 0.7);
+    text-shadow: 20;
+    font-weight: bolder;
+  
+  
+    text-align: center;
+    padding: 40px;
+    margin: 0;
+}
+
+footer {
+    background-color: rgb(10, 3, 70);
+    padding: 30px;
+    
+    color: azure;
+}
+
+.home-section h2, .about-section h2, .services-section h2 {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    margin: 0;
+    box-shadow: inset;
+}
+header {
+    background: none;
+   
+    padding: 0%;
+   
+}
+header img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
     </style>
 </head>
 <body>
-    <header>
-        <img src="images/mast.JPG" alt="Mr. Master Logo" >
+    <header >
+        <img src="images/mast.JPG" alt="Mr. Master Logo">
     </header>
 
     <div class="nav-container">
-        <div class="video-section">
-            <!-- Video 1 Autoplay -->
+        <ul>
+            <li><a href="javascript:window.location.reload();">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+    </div>
+    
+    <div class="content-container">
+        <div class="video-section1">
             <video autoplay muted loop playsinline id="video1">
                 <source src="uploads/002.mp4" type="video/mp4">
             </video>
         </div>
 
         <div class="sidebar">
-            <ul>
-                <li><a href="javascript:window.location.reload();">Home</a></li> <!-- Home button refresh -->
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="privacy.html">Privacy Policy</a></li>
-            </ul>
-            <img src="images/e02 copy.JPG" alt="Privacy Policy Image">
+            <div class="auth-buttons">
+                <a href="login.html">Login</a>
+                <a href="signup.html">Sign Up</a>
+            </div>
+            <img src="images/e02 copy.JPG" alt="Sidebar Image">
         </div>
     </div>
 
@@ -164,7 +220,7 @@
     </div>
 
     <div class="nav-container">
-        <div class="video-section">
+        <div class="video-section2">
             <!-- Video 2 (Play on Scroll or Hover) -->
             <video muted loop playsinline id="video2">
                 <source src="uploads/001.mp4" type="video/mp4">
@@ -172,8 +228,8 @@
         </div>
     </div>
 
-    <p style="font-size: 40px; color: rgb(9, 62, 109); font-weight: bolder; ">Your Learning Journey Begins Here!</p>
-    <p>At Mr. Master, we believe that learning is an adventure, and everyone deserves the tools to succeed. Whether you're a parent helping your child grow or an adult looking to expand your knowledge, we're here to guide you every step of the way. Our carefully curated resources, interactive online classes, and downloadable educational materials are designed to spark curiosity and enhance your learning experience. From LKG to Grade 5, explore a world of knowledge at your fingertips, where education meets creativity.</p>
+    <p style="font-size: 40px; color: rgb(9, 62, 109); font-weight: bolder;">Your Learning Journey Begins Here!</p>
+    <p style=" font-size: 15px; color: rgb(255, 255, 255);padding: 20px; text-align: justify; margin: 5%;">At Mr. Master, we believe that learning is an adventure, and everyone deserves the tools to succeed. Whether you're a parent helping your child grow or an adult looking to expand your knowledge, we're here to guide you every step of the way. Our carefully curated resources, interactive online classes, and downloadable educational materials are designed to spark curiosity and enhance your learning experience. From LKG to Grade 5, explore a world of knowledge at your fingertips, where education meets creativity.</p>
 
     <h3>Join us in this exciting journey of learning, growth, and success.</h3>
     <h4>Welcome to the future of education.</h4>
