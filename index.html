@@ -19,32 +19,41 @@
 
 
 
-.nav-container {
+.nav-container2 {
     display: flex;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.7);
+ background: none;
     padding: 10px;
-    width: 98%;
+    width: auto;
 }
 
 .nav-container ul {
     list-style: none;
     display: flex;
-    gap: 30px;
-    padding: 0;
+    gap: 20px;
+    padding: 10px;
     margin: 0;
+    background: fixed;
+    background-color: rgb(100, 100, 100);
+    box-shadow: 2px 8px 2px rgba(5, 1, 1, 0.5);
+
 }
 
 .nav-container ul li {
     display: inline;
+    margin: 10;
 }
 
 .nav-container ul li a {
     color: white;
     text-decoration: none;
+    text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.5);
+  
     font-size: 16px;
     font-weight: bold;
-    padding: 10px;
+    padding: 5px;
+    text-align: center;
+    
 }
 
 .content-container {
@@ -56,9 +65,9 @@
 }
 
 .video-section1  {
-    width: 58%;
-    padding: 0px;
-    height: 102%; /* Ensures video section occupies the full height of its container */
+    width: 60%;
+    padding: 5px;
+    height: 60vh; /* Ensures video section occupies the full height of its container */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -66,7 +75,7 @@
     margin-top: 0px;
 }
 .video-section2  {
-    width: 68%;
+    width: 73%;
     padding: 0px;
     height: 100%; /* Ensures video section occupies the full height of its container */
     display: flex;
@@ -76,31 +85,31 @@
     margin-top: 0px;
 }
 video {
-    width: 150%;
+    width: 140%;
     height: 100%; /* Ensures the video takes full height */
     object-fit: fill;
-    display: flex;
+    display: block;
 }
 
 
 .sidebar {
     background: none;
-    padding: 10px;
+    padding: 5px;
     width: 25%;
-    height: 98%; /* Ensures sidebar occupies the full height of its container */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    height: 59vh; /* Ensures sidebar occupies the full height of its container */
+    box-shadow: 2px 8px 2px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-   
+    justify-content: last baseline;
+   margin: 0%;
 }
 
 .auth-buttons {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
 .auth-buttons a {
@@ -108,19 +117,20 @@ video {
     color: white;
 background-color: blue;
     padding: 20px;
+    box-shadow: 2px 6px 2px rgba(0, 0, 0, 0.5);
   
     border-radius: 5px;
     font-size: 16px;
     font-weight: bold;
-    margin: 25px 0;
+    margin: 5px 0;
     text-align: center;
 }
 
 .sidebar img {
-    margin-bottom: 20px;
+    margin-bottom: 10;
     width: 100%;
     height: auto;
-    padding: 50px;
+    padding: 20px;
  
 }
 
@@ -132,26 +142,27 @@ h4 {
     text-align: center;
     font-weight: bolder;
     color: yellow;
+    text-shadow: 2px 5px 2px rgba(0, 0, 0, 0.5);
 }
 
 h3 {
     font-size: 30px;
     color: chocolate;
     text-align: center;
+    text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.5);
 }
 
 h6 {
-    font-size: 60px;
+    font-size: 40px;
     color: aliceblue;
-    text-transform: capitalize;
-    text-shadow: rgba(0, 0, 0, 0.7);
-    text-shadow: 20;
+  
     font-weight: bolder;
-  
-  
+    text-shadow: 2px 5px 2px rgba(0, 0, 0, 0.5);
     text-align: center;
-    padding: 40px;
+    padding: 0px;
+    padding-top: 0%;
     margin: 0;
+    margin-top: 0%;
 }
 
 footer {
@@ -161,13 +172,7 @@ footer {
     color: azure;
 }
 
-.home-section h2, .about-section h2, .services-section h2 {
-    font-size: 24px;
-    color: white;
-    text-align: center;
-    margin: 0;
-    box-shadow: inset;
-}
+
 header {
     background: none;
    
@@ -177,8 +182,9 @@ header {
 header img {
     width: 100%;
     height: 200px;
-    object-fit: cover;
+    object-fit: initial;
 }
+
 
     </style>
 </head>
@@ -212,14 +218,13 @@ header img {
             <img src="images/e02 copy.JPG" alt="Sidebar Image">
         </div>
     </div>
+    <br>
 
-    <div class="home-section">
-        <div class="welcome-box">
-            <h6>Welcome to Mr. Master</h6>
-        </div>
-    </div>
-
-    <div class="nav-container">
+    <h6>Welcome to Mr. Master</h6>
+           
+        
+   
+    <div class="nav-container2">
         <div class="video-section2">
             <!-- Video 2 (Play on Scroll or Hover) -->
             <video muted loop playsinline id="video2">
@@ -228,7 +233,7 @@ header img {
         </div>
     </div>
 
-    <p style="font-size: 40px; color: rgb(9, 62, 109); font-weight: bolder;">Your Learning Journey Begins Here!</p>
+    <p style="font-size: 40px; color: rgb(9, 62, 109); font-weight: bolder;text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.5);">Your Learning Journey Begins Here!</p>
     <p style=" font-size: 15px; color: rgb(255, 255, 255);padding: 20px; text-align: justify; margin: 5%;">At Mr. Master, we believe that learning is an adventure, and everyone deserves the tools to succeed. Whether you're a parent helping your child grow or an adult looking to expand your knowledge, we're here to guide you every step of the way. Our carefully curated resources, interactive online classes, and downloadable educational materials are designed to spark curiosity and enhance your learning experience. From LKG to Grade 5, explore a world of knowledge at your fingertips, where education meets creativity.</p>
 
     <h3>Join us in this exciting journey of learning, growth, and success.</h3>
