@@ -8,9 +8,27 @@
 </head>
 <body><style>
     /* General Styles */
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #6595f7; /* Light Blue Background */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
     
-    
-    
+    .back-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #005bb5;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.back-button:hover {
+    background-color: #004494;
+}
     header {
         text-align: center;
         background-color: #007bff;
@@ -22,10 +40,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        height: 100%;
     }
     
     .form-container {
+        margin: 5%;
         background: white;
         padding: 20px;
         border-radius: 10px;
@@ -81,22 +100,15 @@
         background-color: darkgreen;
     }
     
-    footer {
-        text-align: center;
-        padding: 10px;
-        background-color: #007bff;
-        color: white;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-    }
+   
     </style>
     <header>
         <h1>Register</h1>
+        <a href="index.html" class="back-button">Back to Services</a>
     </header>
 
     <main>
-       
+        <br>
         <div class="form-container">
             <h2>Create Your Account</h2>
             <form action="submit_registration.php" method="POST" id="registration-form">
@@ -108,11 +120,12 @@
 
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" required>
+
+                <label for="confirm_password">Confirm Password</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
                 
                 <label for="phone">Phone Number</label>
                 <input type="text" id="phone" name="phone" required>
-
-                          
 
                 <!-- OTP Verification -->
                 <button type="button" onclick="sendOTP()">Send OTP</button>
@@ -122,17 +135,21 @@
                 <button type="submit" class="register-btn">Register</button>
             </form>
 
-            <p>By registering, you get 14 days of free downloads. After 14 days, you will be charged $10 per month to continue downloads.</p>
+          <br>
+            <p>Already have an account? <a href="login.html">Login here</a></p>
         </div>
     </main>
-
-   
-
+ <br>
     <script>
         function sendOTP() {
             alert("OTP Sent to your phone number");
         }
     </script>
+
+<footer>
+    <p>&copy; 2025 Mr. Master</p>
+</footer>
+
 
 </body>
 </html>

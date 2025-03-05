@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Mr. Master</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #6595f7; /* Light Blue Background */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+  .back-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #005bb5;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.back-button:hover {
+    background-color: #004494;
+}
+    
+    </style>
+    <header>
+        <h1>Login to Mr. Master</h1>
+        <a href="index.html" class="back-button">Back to Services</a>
+    </header>
+    
+    <main>
+        <div class="form-container">
+            <h2>Login to Your Account</h2>
+            <form action="submit_login.php" method="POST">
+               <div >
+                <label for="email" style="padding: 20px; text-align:end; padding-top: 20px; " >Email</label>
+                <input type="email" id="email" name="email" required>
+<br>
+<br>
+<br>
+
+                <label for="password" style="padding: 10px; text-align: end;padding-top: 20px;">Password</label>
+                <input type="password"  id="password" name="password" required>
+            </div>
+            <br>
+           
+
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="registration.html">Sign Up</a></p>
+            <p><a href="forgot_password.html">Forgot your email or password?</a></p>
+        </div>
+    </main>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+
+    <footer>
+        <p>&copy; 2025 Mr. Master. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
